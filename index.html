@@ -14,6 +14,72 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .project-img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease;
+            }
+            .project-img:hover {
+                transform: scale(1.02);
+            }
+            .skill-card {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border-radius: 15px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            }
+            .certification-card {
+                background: white;
+                border-radius: 15px;
+                padding: 1.5rem;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                border-left: 5px solid #007bff;
+            }
+            .project-card {
+                background: white;
+                border-radius: 15px;
+                padding: 2rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                border: 1px solid #e9ecef;
+            }
+            .nav-link {
+                transition: all 0.3s ease;
+            }
+            .nav-link:hover {
+                background-color: rgba(255,255,255,0.1);
+                border-radius: 8px;
+            }
+            .section-header {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 2rem;
+                border-radius: 15px;
+                margin-bottom: 2rem;
+            }
+            .timeline-item {
+                border-left: 3px solid #007bff;
+                padding-left: 2rem;
+                margin-bottom: 2rem;
+                position: relative;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -8px;
+                top: 0;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #007bff;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -25,14 +91,14 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Curriculum Vitae</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#second-year">2nd Year</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#third-year">3rd Year</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Capstone Project</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Praticum Project</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Final Report</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about"><i class="fas fa-user me-2"></i>About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience"><i class="fas fa-file-alt me-2"></i>Curriculum Vitae</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education"><i class="fas fa-graduation-cap me-2"></i>Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#second-year"><i class="fas fa-code me-2"></i>2nd Year</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#third-year"><i class="fas fa-microchip me-2"></i>3rd Year</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills"><i class="fas fa-project-diagram me-2"></i>Capstone Project</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests"><i class="fas fa-tasks me-2"></i>Practicum Project</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards"><i class="fas fa-award me-2"></i>Final Report</a></li>
                 </ul>
             </div>
         </nav>
@@ -41,21 +107,23 @@
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Russton
-                        <span class="text-primary">Lau Wei Jie</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Valenza · Sto.Domingo · Sta.Rosa, Laguna +63 945 671 6684 ·
-                        <a href="mailto:name@email.com">russtonlauweijie@email.com</a>
+                    <div class="section-header text-center">
+                        <h1 class="mb-0">
+                            Russton
+                            <span class="text-warning">Lau Wei Jie</span>
+                        </h1>
+                        <div class="subheading mb-3">
+                            Valenza · Sto.Domingo · Sta.Rosa, Laguna +63 945 671 6684 ·
+                            <a href="mailto:name@email.com" class="text-warning">russtonlauweijie@email.com</a>
+                        </div>
+                        <p class="lead mb-0">I'm a Fresh Grad Back-End Developer. I focus on web development.</p>
+                        <p class="mb-0">IT intern at City of Biñan Government.</p>
                     </div>
-                    <p class="lead mb-5">I'm a Fresh Grad Back-End Developer. I focus on web development.</p>
-                    <p>IT intern at City of Biñan Government.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    <div class="social-icons text-center">
+                        <a class="social-icon btn btn-outline-primary me-3" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon btn btn-outline-primary me-3" href="#!"><i class="fab fa-github"></i></a>
+                        <a class="social-icon btn btn-outline-primary me-3" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon btn btn-outline-primary" href="#!"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
             </section>
@@ -63,46 +131,96 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Curriculum Vitae</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Technical Skills</h3>
-                            <div class="subheading mb-3"></div>
-                            <p>· Programming Languages: Basic Python, Basic C#.</p>
-                            <p>· Internet of Things: Basic Internet of Things Concepts, Sensor Intergration, Micro-controller programming.</p>
+                    <h2 class="mb-5 text-center">Curriculum Vitae</h2>
+                    
+                    <!-- Technical Skills Card -->
+                    <div class="skill-card">
+                        <h3 class="mb-3"><i class="fas fa-cogs me-2"></i>Technical Skills</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-code me-2"></i>Programming Languages</h5>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%">Basic Python</div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 60%">Basic C#</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-wifi me-2"></i>Internet of Things</h5>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 80%">IoT Concepts</div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 75%">Sensor Integration</div>
+                                </div>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar" role="progressbar" style="width: 70%">Micro-controller Programming</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Personal Skills</h3>
-                            <div class="subheading mb-3"></div>
-                            <p>· Active Listening and Collaboration Among Team Members.</p>
-                            <p>· Adaptability & Willingness to learn.</p>
-                            <p>· Proactive in Assisting Team Members and Improving Workflow.</p>
-                            <p>· Time management.</p>
-                            <p>· Strong Verbal and Written Communication Skills.</p>
+
+                    <!-- Personal Skills Card -->
+                    <div class="skill-card">
+                        <h3 class="mb-3"><i class="fas fa-users me-2"></i>Personal Skills</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle me-2"></i>Active Listening and Collaboration</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Adaptability & Willingness to Learn</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Proactive Team Assistance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle me-2"></i>Time Management</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Strong Communication Skills</li>
+                                    <li><i class="fas fa-check-circle me-2"></i>Workflow Improvement</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Seminars & Certificates</h3>
-                            <div class="subheading mb-3"></div>
-                            <p>· <strong>Software-Defined Networking, Openflow, NFV, & Open RAN.</strong></p>
-                            <img src="assets/img/softwaredefined.jpg" alt="Software Defined Networking" class="project-img" style="margin-bottom: 1em;">
-                            <p>· <strong>Introduction to Cloud Computing.</strong></p>
-                            <img src="assets/img/cloudcomputing.jpg" alt="Cloud Computing" class="project-img" style="margin-bottom: 1em;">
-                            <p>· <strong>CompTIA IT Fundamental+ (ITF+) Certification.</strong></p>
-                            <img src="assets/img/comptia.jpg" alt="CompTIA ITF+ Certification" class="project-img" style="margin-bottom: 1em;">
-                            <p>· <strong>Introduction to Edge Computing.</strong></p>
-                            <img src="assets/img/edgecomputing.jpg" alt="Edge Computing" class="project-img" style="margin-bottom: 1em;">
-                            <p>· <strong>WearOS: Emerging Technology for Internet and Learning of Everything.</strong></p>
-                            <img src="assets/img/wearos.jpg" alt="WearOS: Emerging Technology" class="project-img" style="margin-bottom: 1em;">
-                            <p>· <strong>Introduction to the Data Center Industry.</strong></p>
-                            <img src="assets/img/datacenter.jpg" alt="Data Center Industry" class="project-img" style="margin-bottom: 1em;">
+
+                    <!-- Certifications Section -->
+                    <h3 class="mb-4"><i class="fas fa-certificate me-2"></i>Seminars & Certificates</h3>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>Software-Defined Networking, Openflow, NFV, & Open RAN</strong></h5>
+                                <img src="assets/img/softwaredefined.jpg" alt="Software Defined Networking" class="project-img w-100 mb-3">
+                            </div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary"></span></div>
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>Introduction to Cloud Computing</strong></h5>
+                                <img src="assets/img/cloudcomputing.jpg" alt="Cloud Computing" class="project-img w-100 mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>CompTIA IT Fundamental+ (ITF+) Certification</strong></h5>
+                                <img src="assets/img/comptia.jpg" alt="CompTIA ITF+ Certification" class="project-img w-100 mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>Introduction to Edge Computing</strong></h5>
+                                <img src="assets/img/edgecomputing.jpg" alt="Edge Computing" class="project-img w-100 mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>WearOS: Emerging Technology for Internet and Learning of Everything</strong></h5>
+                                <img src="assets/img/wearos.jpg" alt="WearOS: Emerging Technology" class="project-img w-100 mb-3">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="certification-card">
+                                <h5><strong>Introduction to the Data Center Industry</strong></h5>
+                                <img src="assets/img/datacenter.jpg" alt="Data Center Industry" class="project-img w-100 mb-3">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -110,152 +228,339 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Mapúa Malayan Colleges Laguna</h3>
-                            <div class="subheading mb-3">Bachelor of Science in Information Technology</div>
-                            <div><p><strong>Consistent Dean's Lister AY: 2021-2025</strong></p></div>
-                            <p>Dean's Lister AY: 2021-2022 (Third Term)</p>
-                            <p>Dean's Lister AY: 2022-2023 (Third Term)</p>
-                            <p>Dean's Lister AY: 2024-2025 (First Term)</p>
+                    <h2 class="mb-5 text-center">Education</h2>
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Mapúa Malayan Colleges Laguna</h3>
+                                <div class="subheading mb-3">Bachelor of Science in Information Technology</div>
+                                <div class="alert alert-success">
+                                    <strong>Consistent Dean's Lister AY: 2021-2025</strong>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-star text-warning me-2"></i>Dean's Lister AY: 2021-2022 (Third Term)</li>
+                                    <li><i class="fas fa-star text-warning me-2"></i>Dean's Lister AY: 2022-2023 (Third Term)</li>
+                                    <li><i class="fas fa-star text-warning me-2"></i>Dean's Lister AY: 2024-2025 (First Term)</li>
+                                </ul>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary badge bg-primary fs-6">2021 - Present</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2021 - Present</span></div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Mapúa Malayan Colleges Laguna</h3>
-                            <div class="subheading mb-3">Senior High School</div>
-                            <p>Strand: Information Communications Technology</p>
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Mapúa Malayan Colleges Laguna</h3>
+                                <div class="subheading mb-3">Senior High School</div>
+                                <p><i class="fas fa-info-circle me-2"></i>Strand: Information Communications Technology</p>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary badge bg-primary fs-6">2019 - 2021</span></div>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">2019 - 2021</span></div>
                     </div>
                 </div>
             </section>
             <section class="resume-section" id="second-year">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">2nd Year</h2>
-                    <p>JRL Services</p>
-                    <p>JRL Services provides a variety of services, including distribution, document formatting, printing, and additional offerings. Users can conveniently access these services and track the progress or status of their requests. The administrator's role involves managing the system's data, which includes updating service information, ensuring smooth operations, and handling refund processes when necessary.</p>
-                    <img src="assets/img/bookmain.png" alt="Bookstore Main" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/services.png" alt="Services" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/partner.png" alt="Partner" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/contact.png" alt="Contact" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/loginbook.png" alt="Login Book" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/request.png" alt="Request" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/bookmanagement.png" alt="Book Management" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/refund.png" alt="Refund" class="project-img" style="margin-bottom: 1em;">
-                    <p style="font-size: 1.8em;"><strong>Software Used:</strong> ASP, ASPX</p>
-                    <p style="font-size: 1.8em;"><strong>Hardware Used:</strong> Laptop</p>
+                    <h2 class="mb-5 text-center">2nd Year Project</h2>
+                    <div class="project-card">
+                        <h3 class="mb-3"><i class="fas fa-book me-2"></i>JRL Services</h3>
+                        <p class="lead">JRL Services provides a variety of services, including distribution, document formatting, printing, and additional offerings. Users can conveniently access these services and track the progress or status of their requests. The administrator's role involves managing the system's data, which includes updating service information, ensuring smooth operations, and handling refund processes when necessary.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/bookmain.png" alt="Bookstore Main" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/services.png" alt="Services" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/partner.png" alt="Partner" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/contact.png" alt="Contact" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/loginbook.png" alt="Login Book" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/request.png" alt="Request" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/bookmanagement.png" alt="Book Management" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/refund.png" alt="Refund" class="project-img w-100">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <strong><i class="fas fa-code me-2"></i>Software Used:</strong> ASP, ASPX
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-warning">
+                                    <strong><i class="fas fa-laptop me-2"></i>Hardware Used:</strong> Laptop
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="resume-section" id="third-year">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">3rd Year</h2>
-                    <p><strong>Visitor Counter</strong></p>
-                    <p>Updated system in which the IR Sensor input is connected to a wemos device and to an output of a 7 segment display and the input will be put to a database using XAMPP with a RESTful Approach, MySQL, and PHP files. This time with an added feature using Xamarin android programming to control our sensor and viewing of visitor count</p>
-                    <img src="assets/img/counter1.jpg" alt="Counter 1" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/counter2.jpg" alt="Counter 2" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/counter3.png" alt="Counter 3" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/counter4.png" alt="Counter 4" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/counter5.jpg" alt="Counter 4" class="project-img" style="margin-bottom: 1em;">
-                    <p style="font-size: 1.8em;"><strong>Software Used:</strong> Xamarin</p>
-                    <p style="font-size: 1.8em;"><strong>Hardware Used:</strong> Arduino Uno, Wemos R1 D1, IR Sensor, LED, 7 Segment display, Android Phone</p>
+                    <h2 class="mb-5 text-center">3rd Year Project</h2>
+                    <div class="project-card">
+                        <h3 class="mb-3"><i class="fas fa-microchip me-2"></i>Visitor Counter</h3>
+                        <p class="lead">Updated system in which the IR Sensor input is connected to a wemos device and to an output of a 7 segment display and the input will be put to a database using XAMPP with a RESTful Approach, MySQL, and PHP files. This time with an added feature using Xamarin android programming to control our sensor and viewing of visitor count</p>
+                        
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/counter1.jpg" alt="Counter 1" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/counter2.jpg" alt="Counter 2" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/counter3.png" alt="Counter 3" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/counter4.png" alt="Counter 4" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/counter5.jpg" alt="Counter 5" class="project-img w-100">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <strong><i class="fas fa-code me-2"></i>Software Used:</strong> Xamarin
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-warning">
+                                    <strong><i class="fas fa-microchip me-2"></i>Hardware Used:</strong> Arduino Uno, Wemos R1 D1, IR Sensor, LED, 7 Segment display, Android Phone
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Capstone Project</h2>
-                    <div class="subheading mb-3">This capstone project centers on the development of a web-based Physicochemical Water Parameter Monitoring and Recommendation System for aquaponics. The system monitors various water parameters and provides recommendations on whether a water change is needed, with suggestions tailored to the specific conditions of each parameter.</div>
-                    
-                    <div class="subheading mb-3"><strong>Key Features</strong></div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Provides Live Data Such As the Water Parameters' Value, Graph in the Dashboard, General Assessment, and Recommendation.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Generate Water Report, and Export Report Feature.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Provides Live Notifications.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Provides User's Activity Logs.
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Provide users the Baseline/Optimal Range for Each Parameters.
-                        </li>
-                    </ul>
-                    <div><img src="assets/img/loginschool.png" alt="Capstone Project Login Page" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/dashboardschool.png" alt="Capstone Project Dashboard" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/waterreport.png" alt="Capstone Project Water Report" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/sensordata.png" alt="Capstone Project Sensor Data" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/notification.png" alt="Capstone Project Notification" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/logschool.png" alt="Capstone Project Logs" class="project-img" style="margin-bottom: 1em;"></div>
-                    <div><img src="assets/img/baseline.png" alt="Capstone Project Baseline" class="project-img" style="margin-bottom: 1em;"></div>
-                    <p style="font-size: 1.8em;"><strong>Software Used:</strong> Visual Studio (With Codeigniter 4 Framework), Microsoft Azure, Arduino IDE</p>
-                    <p style="font-size: 1.8em;"><strong>Hardware Used:</strong> Laptop, Arduino Uno, Wemod R1 D1, Water Sensors.</p>
+                    <h2 class="mb-5 text-center">Capstone Project</h2>
+                    <div class="project-card">
+                        <div class="alert alert-primary">
+                            <h4><i class="fas fa-water me-2"></i>Physicochemical Water Parameter Monitoring and Recommendation System</h4>
+                            <p class="mb-0">This capstone project centers on the development of a web-based Physicochemical Water Parameter Monitoring and Recommendation System for aquaponics. The system monitors various water parameters and provides recommendations on whether a water change is needed, with suggestions tailored to the specific conditions of each parameter.</p>
+                        </div>
+                        
+                        <h4 class="mb-3"><i class="fas fa-star me-2"></i>Key Features</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="fa-ul mb-0">
+                                    <li class="mb-2">
+                                        <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                        Provides Live Data Such As the Water Parameters' Value, Graph in the Dashboard, General Assessment, and Recommendation.
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                        Generate Water Report, and Export Report Feature.
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                        Provides Live Notifications.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="fa-ul mb-0">
+                                    <li class="mb-2">
+                                        <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                        Provides User's Activity Logs.
+                                    </li>
+                                    <li class="mb-2">
+                                        <span class="fa-li"><i class="fas fa-check text-success"></i></span>
+                                        Provide users the Baseline/Optimal Range for Each Parameters.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/loginschool.png" alt="Capstone Project Login Page" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/dashboardschool.png" alt="Capstone Project Dashboard" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/waterreport.png" alt="Capstone Project Water Report" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/sensordata.png" alt="Capstone Project Sensor Data" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/notification.png" alt="Capstone Project Notification" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/logschool.png" alt="Capstone Project Logs" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-3 mb-3">
+                                <img src="assets/img/baseline.png" alt="Capstone Project Baseline" class="project-img w-100">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <strong><i class="fas fa-code me-2"></i>Software Used:</strong> Visual Studio (With Codeigniter 4 Framework), Microsoft Azure, Arduino IDE
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-warning">
+                                    <strong><i class="fas fa-microchip me-2"></i>Hardware Used:</strong> Laptop, Arduino Uno, Wemod R1 D1, Water Sensors.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Interests-->
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Practicum Project</h2>
-                    <p style="font-size: 1.5em;"><strong>The task assigned to me and my groupmates is to develop the Inventory Management System. Access to certain features is restricted based on the user's role. The system enables users to manage both hardware and software inventories, and it also tracks user logs and activities.</strong></p>
-                    <img src="assets/img/login.jpg" alt="Login GUI" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/maindashboard.jpg" alt="Main Dashboard" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/hardwarefilter.png" alt="Hardware Inventory Management" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/software.png" alt="Software Inventory Management" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/reportdashboard.png" alt="Reports Page" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/accountmanagement.png" alt="Account Management Page" class="project-img" style="margin-bottom: 1em;">
-                    <img src="assets/img/systemlogs.png" alt="System Logs Page" class="project-img" style="margin-bottom: 1em;">
-                    <p style="font-size: 1.5em;"><strong>Software Used:</strong> Visual Studio (With Codeigniter 4 Framework), Xampp</p>
-                    <p style="font-size: 1.5em;"><strong>Hardware Used:</strong> Laptop</p>
+                    <h2 class="mb-5 text-center">Practicum Project</h2>
+                    <div class="project-card">
+                        <div class="alert alert-success">
+                            <h4><i class="fas fa-tasks me-2"></i>Inventory Management System</h4>
+                            <p class="mb-0">The task assigned to me and my groupmates is to develop the Inventory Management System. Access to certain features is restricted based on the user's role. The system enables users to manage both hardware and software inventories, and it also tracks user logs and activities.</p>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/login.jpg" alt="Login GUI" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/maindashboard.jpg" alt="Main Dashboard" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/hardwarefilter.png" alt="Hardware Inventory Management" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/software.png" alt="Software Inventory Management" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/reportdashboard.png" alt="Reports Page" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/accountmanagement.png" alt="Account Management Page" class="project-img w-100">
+                            </div>
+                            <div class="col-md-6 col-lg-4 mb-3">
+                                <img src="assets/img/systemlogs.png" alt="System Logs Page" class="project-img w-100">
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <strong><i class="fas fa-code me-2"></i>Software Used:</strong> Visual Studio (With Codeigniter 4 Framework), Xampp
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-warning">
+                                    <strong><i class="fas fa-laptop me-2"></i>Hardware Used:</strong> Laptop
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <hr class="m-0" />
             <!-- Awards-->
             <section class="resume-section" id="awards">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">1. Overview of the Practicum Engagement</h2>
-                    <p>- Information & Communications Technology Office - ICTO Biñan.</p>
-                    <p>- Develop a Inventory Management System For The ICTO Biñan Office. </p>
-                    <p>- 486 Hours.</p>
-                </div>
-            </section>
-            <section class="resume-section" id="presentation-output">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">2. Presentation of Output</h2>
-                    <p><strong>ICTO Inventory Management System</strong></p>
-                    <a href="#interests" class="btn btn-primary mb-3">Go to Practicum Project</a>
-                    <!-- Add your content for this section here -->
-                </div>
-            </section>
-            <section class="resume-section" id="synthesis-practicum">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">3. Synthesis of the Practicum Engagement</h2>
-                    <p>The practicum engagement provided invaluable hands-on experience in developing and deploying an Inventory Management System tailored for the ICTO Biñan Office. Through this project, I gained practical skills in software development, team collaboration, and real-world problem-solving. The experience enhanced my technical proficiency, deepened my understanding of user requirements, and strengthened my ability to adapt to dynamic work environments. Overall, the practicum served as a bridge between academic learning and professional practice, preparing me for future challenges in the IT industry.</p>
-                </div>
-            </section>
-            <section class="resume-section" id="appendices">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">4. Appendices</h2>
-                    <ul>
-                        <li>1.0 <a href="assets/img/Resume_RusstonLauWeiJie.pdf" target="_blank">Curriculum Vitae</a></li>
-                        <li>2.0 <a href="assets/img/Endorsement_Binan_Jie_signed.pdf" target="_blank">Endorsement Letter</a></li>
-                        <li>3.0 <a href="assets/img/Liability.pdf" target="_blank">Liability Waiver</a></li>
-                        <li>4.0 <a href="assets/img/Scanned_Document.pdf" target="_blank">Training Plan</a></li>
-                        <li>5.0 <a href="assets/img/weeklyreportcombined.pdf" target="_blank">Complete Weekly Journal</a></li>
-                        <li>6.0 <a href="assets/img/Acceptance.pdf" target="_blank">Practicum Acceptance</a></li>
-                    </ul>
+                    <h2 class="mb-5 text-center">Final Report</h2>
+                    
+                    <div class="project-card">
+                        <h3 class="mb-4"><i class="fas fa-info-circle me-2"></i>1. Overview of the Practicum Engagement</h3>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-building fa-3x text-primary mb-3"></i>
+                                    <h5>Information & Communications Technology Office - ICTO Biñan</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-cogs fa-3x text-success mb-3"></i>
+                                    <h5>Develop a Inventory Management System For The ICTO Biñan Office</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="text-center">
+                                    <i class="fas fa-clock fa-3x text-warning mb-3"></i>
+                                    <h5>486 Hours</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3 class="mb-4"><i class="fas fa-presentation me-2"></i>2. Presentation of Output</h3>
+                        <div class="text-center">
+                            <h4><strong>ICTO Inventory Management System</strong></h4>
+                            <a href="#interests" class="btn btn-primary btn-lg"><i class="fas fa-arrow-up me-2"></i>Go to Practicum Project</a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3 class="mb-4"><i class="fas fa-lightbulb me-2"></i>3. Synthesis of the Practicum Engagement</h3>
+                        <div class="alert alert-info">
+                            <p class="mb-0">The practicum engagement provided invaluable hands-on experience in developing and deploying an Inventory Management System tailored for the ICTO Biñan Office. Through this project, I gained practical skills in software development, team collaboration, and real-world problem-solving. The experience enhanced my technical proficiency, deepened my understanding of user requirements, and strengthened my ability to adapt to dynamic work environments. Overall, the practicum served as a bridge between academic learning and professional practice, preparing me for future challenges in the IT industry.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3 class="mb-4"><i class="fas fa-file-alt me-2"></i>4. Appendices</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>1.0 Curriculum Vitae</span>
+                                        <a href="assets/img/Resume_RusstonLauWeiJie.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>2.0 Endorsement Letter</span>
+                                        <a href="assets/img/Endorsement_Binan_Jie_signed.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>3.0 Liability Waiver</span>
+                                        <a href="assets/img/Liability.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>4.0 Training Plan</span>
+                                        <a href="assets/img/Scanned_Document.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>5.0 Complete Weekly Journal</span>
+                                        <a href="assets/img/weeklyreportcombined.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span><i class="fas fa-file-pdf me-2"></i>6.0 Practicum Acceptance</span>
+                                        <a href="assets/img/Acceptance.pdf" target="_blank" class="btn btn-sm btn-outline-primary"><i class="fas fa-download"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
